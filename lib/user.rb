@@ -10,8 +10,12 @@ class User
     (@date.month == today.month) && (@date.mday == today.mday)
   end
 
-  def days_to_birthday
-    (next_birthday - today).to_i
+  def days_left
+    if days_to_birthday > 1
+      "Your birthday is in #{days_to_birthday} days"
+    else
+      "Your birthday is in #{days_to_birthday} day"
+    end
   end
 
   def next_birthday
@@ -36,6 +40,10 @@ class User
 
   def already_happened?
     (@date.month == today.month && @date.mday < today.mday) || @date.month < today.month
+  end
+
+  def days_to_birthday
+    (next_birthday - today).to_i
   end
 
 

@@ -4,5 +4,5 @@
 <% if @user.birthday? %>
   <h1> Happy Birthday! </h1>
 <% else %>
-  <h1> Your birthday is in <%= @user.days_to_birthday %> day </h1>
+  <h1> <%= @user.days_left %> </h1>
 <% end %>

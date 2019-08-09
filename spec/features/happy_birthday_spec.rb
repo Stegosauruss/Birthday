@@ -20,7 +20,7 @@ feature 'happy birthday' do
     fill_in 'name', with: 'Russell'
     fill_in 'date', with: "2000-08-8"
     click_button 'Go!'
-    expect(page).to have_content("Your birthday is in 365 day")  
+    expect(page).to have_content("Your birthday is in 365 days")  
   end
 
   scenario 'birthday is tomorrow' do
