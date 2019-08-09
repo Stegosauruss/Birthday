@@ -1,1 +1,8 @@
-<%= @user.name %>
+<h1> <%= @user.name %> </h1>
+<h2> Your Birthday is <%= @user.date.strftime("%B %d, %Y") %> </h2>
+
+<% if @user.birthday? %>
+  <h1> Happy Birthday! </h1>
+<% else %>
+  <h1> Your birthday is in <%= @user.days_to_birthday %> day </h1>
+<% end %>

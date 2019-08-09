@@ -1,4 +1,4 @@
-feature 'hello_world' do
+feature 'greetings stranger' do
   scenario 'visit homepage' do
     visit '/'
     expect(page).to have_content 'Greetings Stranger!'
